@@ -13,3 +13,8 @@
       when: ansible_pkg_mgr == 'apt'
       ansible.builtin.apt:
         upgrade: dist
+
+    - name: Dist upgrade packages with apt
+      when: ansible_pkg_mgr == 'apt'
+      ansible.builtin.apt:
+        dist_upgrade: true
