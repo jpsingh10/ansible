@@ -16,5 +16,5 @@
 
     - name: Dist upgrade packages with apt
       when: ansible_pkg_mgr == 'apt'
-      ansible.builtin.apt:
-        dist_upgrade: true
+      ansible.builtin.command:
+        cmd: apt-get dist-upgrade -y
